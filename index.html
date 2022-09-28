@@ -1,622 +1,188 @@
- 
-<html>
- 
-<head>
-        <title>Bán khóa học IELTS</title>
-         
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    
-    
-
- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
- 
- 
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
-		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
-
-		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
-		 
-		 
-		 <style>
-         
-              *{
-	margin:0;
-	padding:0;
-}
-body{
-	background:#eba426;	
-	color:#444;
-	font-size:24px;
-	color: #333;
-    font-family: 'Oswald', sans-serif;
-	overflow: hidden;
-}
- 
- 
-.booklet           {
-	width:900px;
-	height:607px;
-	position:relative;
-	margin:0 auto 10px;
-	-moz-box-shadow:0px 0px 1px #fff;
-	-webkit-box-shadow:0px 0px 1px #fff;
-	box-shadow:0px 0px 1px #fff;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-}
-.booklet .b-wrap-left  {
-	background:#fff url(images/left_bg.jpg) no-repeat top left;
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-bottom-left-radius: 10px;
-	-moz-border-radius-topleft:10px;
-	-moz-border-radius-bottomleft: 10px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-}
-.booklet .b-wrap-right {
-	background:#efefef url(images/right_bg.jpg) no-repeat top left;
-	-webkit-border-top-right-radius: 10px;
-	-webkit-border-bottom-right-radius: 10px;
-	-moz-border-radius-topright: 10px;
-	-moz-border-radius-bottomright: 10px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-.booklet .b-counter {
-	bottom:10px;
-	position:absolute;
-	display:block;
-	width:90%;
-	height:20px;
-	border-top:1px solid #ddd;
-	color:#222;
-	text-align:center;
-	font-size:20px;
-	padding:5px 0 0;
-	background:transparent;
-	-moz-box-shadow:0px -1px 1px #fff;
-	-webkit-box-shadow:0px -1px 1px #fff;
-	box-shadow:0px -1px 1px #fff;
-	opacity:0.8;
-}
-.book_wrapper{
-	top: -140;
-	margin:0 auto;
-	padding-top:50px;
-	width:905px;
-	height:540px;
-	position:relative;
-	background:transparent url(images/bg.png) no-repeat 9px 27px;
-}
-.book_wrapper h1{
-	color:orange;
-	margin:5px 5px 5px 15px;
-	font-size:35px;
-	background:transparent url(images/h1.png) no-repeat bottom left;
-	padding-bottom:7px;
-    text-transform: uppercase;
-    font-weight: normal;
-}
-.book_wrapper p{
-	font-size:18px;
-	-webkit-text-size-adjust: 18px;
-	margin:5px 5px 5px 15px;
-}
-.book_wrapper a.article,
-.book_wrapper a.demo{
-	background:transparent url(images/circle.png) no-repeat 50% 0px;
-	display:block;
-	width:95px;
-	height:41px;
-	text-decoration:none;
-	outline:none;
-	font-size:16px;
-	color:#555;
-	float:left;
-	line-height:41px;
-	padding-left:47px;
-}
-.book_wrapper a.demo{
-	margin-left:50px;
-}
-.book_wrapper a.article:hover,
-.book_wrapper a.demo:hover{
-	background-position:50% -41px;
-	color:#13386a;
-}
-.book_wrapper img{
-	margin:10px 0px 5px 35px;
-	width:300px;
-	padding:4px;
-	border:1px solid #ddd;
-	-moz-box-shadow:1px 1px 1px #fff;
-	-webkit-box-shadow:1px 1px 1px #fff;
-	box-shadow:1px 1px 1px #fff;
-}
-.booklet .b-wrap-right img{
-	border:1px solid #E6E3C2;
-}
-a#next_page_button,
-a#prev_page_button{
-	display:none;
-	position:absolute;
-	width:41px;
-	height:40px;
-	cursor:pointer;
-	margin-top:-20px;
-	top:50%;
-	background:transparent url(images/buttons.png) no-repeat 0px -40px;
-}
-a#prev_page_button{
-	left:-30px;
-}
-a#next_page_button{
-	right:-30px;
-	background-position:-41px -40px;
-}
-a#next_page_button:hover{
-	background-position:-41px 0px;
-}
-a#prev_page_button:hover{
-	background-position:0px 0px;
-}
- 
-button {
-    background: transparent;
-    color: white;
-    border: 3px solid white;
-    border-radius: 50px;
-    padding: 15px 60px;
-    font: 26px cursive;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    letter-spacing: 3px;
-  }
-
-  button:focus{
-    outline: none;
-		border: 3px solid white;
-  }
-  
-  button:hover {
-    background-color: #e4e6eb;
-	color: black;
-    cursor: pointer;
-  }
-  
-  .button-hand {
-    margin-top: 50px;
-	padding: 5px;
-  }
-  
-  /* .button-hand button::before {
-    content: "☝";
-    font-size: 100px;
-    color: black;
-    animation: pointing 1s infinite;
-  } */
-  
-  *:before,
-  *:after {
-    content: "";
-    position: absolute;
-    transform: rotate(180deg);
-    left: 80px;
-    top: -86px;
-  }
-  
-  @keyframes pointing {
-    0% {
-      margin-top: 0px;
-    }
-    50% {
-      margin-top: -25px;
-    }
-    100% {
-      margin-top: 0px;
-    }
-  }
-  
-  .button-hand button .hands:before,
-  .button-hand button .hands:after {
-    content: "☝";
-    font-size: 47px;
-    color: black;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .button-hand button .hands:after {
-    top: 66px;
-    transform: rotate(-45deg);
-    right: 50px;
-  }
-  
-  .button-hand button .hands:before {
-    top: 0px;
-    transform: rotate(-90deg);
-    right: -240px;
-  }
-  
-  .button-hand button:hover .hands:before {
-    opacity: 1;
-    right: -220px;
-  }
-  
-  .button-hand button:hover .hands:after {
-    opacity: 1;
-    top: 46px;
-  }
-  
-  .button {
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  border-radius: 3rem;
-  background: linear-gradient(45deg,#5334f5,#9c6fff);
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  box-shadow: 0 10px 20px 0 rgba(0,0,0,.15);
-  transition: .8s cubic-bezier(.2,1,.2,1);
-  cursor: pointer;
-}
-
-.button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px 0 rgba(0,0,0,.25);  
-}
-.container {
-  font-size: 1.3rem;
-  font-family: sans-serif;
-  color: #888;
-  text-align: center;
-  margin-left: 10cm;
-}
-
-.b-load{
-	width: 1000px;
-}
-         </style>
-		 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web sell IELTS course</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <br><br><br><br><br>
-		 
-		<div class="book_wrapper">
-			<a id="next_page_button"></a>
-			<a id="prev_page_button"></a>
-			 
-			<div id="mybook" style="display:none;">
-				<div class="b-load">
-					<div>
-						<img src="images/ielts.png" alt=""/>
-						<h1 style="text-align:center;">TRƯỢT ĐẠI HỌC...!!!</h1>
-						<p>Con trai tôi, trượt đại học, 18 tuổi cái tuổi vẫn còn
-							chưa
-							đủ nhận thức, vẫn rất còn non nớt và chưa ý thức được
-							tương
-							lai, định hướng và mục đích sống như thế nào thì phải
-							tạm
-							dừng trước ngưỡng cửa đại học. Vậy 1 năm tới, con sẽ như
-							thế
-							nào khi các bạn của con đều đã trở thành Sinh viên, liệu
-							con
-							có đủ kiên trì để ôn thêm một năm nữa hay lại nản lòng,
-							tự
-							ti khi mang tiếng trượt đại </p>
-						<!-- <a href="" class="article">ARTICLE</a>
-						<a href="" class="demo">DEMO</a> -->
-					</div>
-					<div>
-						<!-- <img src="images/2.jpg" alt="" /> -->
-						<!-- <h1>Animated Portfolio Gallery</h1> -->
-						<p>  học.... Thực tâm là người
-							mẹ,
-							tôi có buồn, nhưng tôi đã  hứa dù thế nào cũng phải đồng
-							hành
-							cùng con, đối mặt với hoàn cảnh, vấn đề mà con gặp
-							phải...
-							thế nhưng để động viên con không phải dễ, không phải câu
-							chuyện ngày một ngày hai khi trước mắt còn là 1 chặng
-							đường không hề bằng phẳng...  <br> <br>
+        <div id="div-parent">
+            
+                <span><h1><strong style="text-decoration-line: underline;
+                    text-decoration-thickness: 25%;font-weight:bold;text-align: center;">TRƯỢT ĐẠI HỌC...!!!</strong></h1>
+                    <p>Con trai tôi, trượt đại học, 18 tuổi cái tuổi vẫn còn chưa
+                    đủ nhận thức, vẫn rất còn non nớt và chưa ý thức được tương
+                    lai, định hướng và mục đích sống như thế nào thì phải tạm
+                    dừng trước ngưỡng cửa đại học. Vậy 1 năm tới, con sẽ như thế
+                    nào khi các bạn của con đều đã trở thành Sinh viên, liệu con
+                    có đủ kiên trì để ôn thêm một năm nữa hay lại nản lòng, tự
+                    ti khi mang tiếng trượt đại học.... Thực tâm là người mẹ,
+                    tôi có buồn, nhưng tôi đã hứa dù thế nào cũng phải đồng hành
+                    cùng con, đối mặt với hoàn cảnh, vấn đề mà con gặp phải...
+                    thế nhưng để động viên con không phải dễ, không phải câu
+                    chuyện ngày một ngày hai khi trước mắt còn là 1 chặng đường
+                    không hề bằng phẳng...
+                    <br> <br>
+                    <img src="ielts.png" alt="image">
+                    <br> <br>
+                    SỰ ÂN HẬN CỦA TÔI – NGƯỜI MẸ...
+                    Khi con bắt đầu bước vào cấp 3, tôi đã định hướng cho con
+                    luyện Ielts vì đến hiện giờ, tiếng Anh đã phổ cập và bắt
+                    buộc các con phải trang bị, thành thạo tiếng Anh khi bắt đầu
+                    đi làm, có tiếng Anh con mới tự tin, mới có nhiều cơ hội
+                    nhận được công việc tốt... và tôi bắt đầu tìm kiếm lớp...
+                    sau một hồi tìm hiểu tôi chọn 1 trung tâm khá có tiếng vì
+                    thấy quảng cáo rầm rộ, rất nhiều người biết đến, đã vậy lại
+                    học gần nhà, đôi đường đều thuận tiện. Ghi danh cho con,
+                    đóng tiền kha khá để vào lớp Pre-Ielts sau bài test
+                    (Pre-Ielts là bước tiền đề để cung cấp những kiến thức IELTS
+                    cơ bản cho các bạn chưa từng ôn thi IELTS hay trình độ tiếng
+                    Anh chưa được tốt). Trước khi vào học, tôi có đọc rõ quy
+                    định là nếu con không làm đủ bài sẽ thông báo về ngay cho
+                    gia đình để phối hợp đôn đốc, nhắc nhở...thế nên tôi rất yên
+                    tâm và để con tự giác học vì nếu có vấn đề gì thì trung tâm
+                    sẽ thông báo cho tôi. Con đi học về và bảo lớp đông như
+                    giảng đường đại học mẹ ạ, tôi có phần hơi e ngại nhưng vốn
+                    dĩ trung tâm rất có tiếng nên tôi lại tự nhủ là trung tâm có
+                    phương pháp dạy để các con tiếp thu tốt, và cứ thế tôi để
+                    con học, con tôi được cái bố mẹ bảo học gì thì cứ đi thôi và
+                    ít khi kêu ca này nọ nên tôi cũng dần dần không để ý nhiều.
+                    Thế rồi lần lượt, tôi đóng tiền khóa 2 Pre-Ielts rồi khóa 1,
+                    khóa 2 Ielts với con số lên đến vài chục triệu đồng, không
+                    phải nhỏ đối với người làm công ăn lương như tôi, nhưng thôi
+                    thì cố gắng vì giấc mơ cầm trong tay chứng chỉ 7.0 của
+                    con... Đến một ngày gần hết khóa học thứ 2 thì trung tâm có
+                    báo con thiếu bài, mở chi tiết ra xem thì trời ơi, con tôi
+                    thiếu gần 20 bài... vậy lúc con tôi thiếu 1, 2 bài sao không
+                    thấy thông báo??? Rồi đốc thúc con hoàn thành bài để nộp
+                    theo yêu cầu thì đến kỳ thi kết thúc hai khóa học, với hai
+                    khóa học này, theo như lộ trình của trung tâm thì các con có
+                    thể dự thi kỳ thi Ielts lấy điểm 6.5 hoặc 7.0. Ở trung tâm
+                    thông báo thi cuối kỳ 2 buổi, một buổi 3 kỹ năng (nghe, đọc,
+                    viết) và một buổi nói; con tôi thi xong nghe, đọc, viết thì
+                    sau cứ chần chừ không chịu đăng ký thi nói, cũng chẳng thấy
+                    trung tâm nhắc nhở... cũng không thấy có điểm của các kỹ
+                    năng con đã thi. Thế là học xong, thi xong, kết thúc khóa
+                    học và tôi nghĩ con tôi sẵn sàng đi thi Ielts. Tôi đăng ký
+                    thi cho con và đến ngày đưa đón con, hồi hộp đợi kết quả...
+                    Sau gần 2 tuần 5.5 là điểm số tôi nhận được, hoang mang và
+                    thất vọng vô cùng, không tin nổi vào kết quả nhận được; sẵn
+                    sàng đi thi để lấy ít nhất 6.5 mà điểm mang về 5.5 chỉ trên
+                    trình độ tối thiểu 5.0. Lúc nhận điểm thi, con lấy hết can
+                    đảm và bảo: Thực ra đi thi con không tự tin, con không biết
+                    gì mấy mẹ ạ... <br> <br>
 
-							SỰ ÂN HẬN CỦA TÔI – NGƯỜI MẸ... <br>
-							Khi con bắt đầu bước vào cấp 3, tôi đã định hướng cho
-							con
-							luyện Ielts vì đến hiện giờ, tiếng Anh đã phổ cập và bắt
-							buộc các con phải trang bị, thành thạo tiếng Anh khi bắt
-							đầu
-							đi làm, có tiếng Anh con mới tự tin, mới có nhiều cơ hội
-							nhận được công việc tốt... và tôi bắt đầu tìm kiếm
-							lớp... sau một hồi tìm hiểu tôi chọn 1 trung tâm khá có tiếng
-							vì
-							thấy quảng cáo rầm rộ, rất nhiều người biết đến, đã vậy
-							lại
-							học gần nhà, đôi đường đều thuận tiện. Ghi danh cho con,
-							đóng tiền kha khá để vào  </p>
-						<!-- <a href="" target="_blank" class="article">ARTICLE</a>
-						<a href="" class="demo">DEMO</a> -->
-					</div>
-					<div>
-						<img src="images/ielts2.png" alt="" />
-						<!-- <h1>Annotation Overlay Effect</h1> -->
-						<p>lớp Pre-Ielts sau bài test
-							(Pre-Ielts là bước tiền đề để cung cấp những kiến thức
-							IELTS cơ bản cho các bạn  chưa từng ôn thi IELTS hay trình độ
-							tiếng
-							Anh chưa được tốt). Trước khi vào học, tôi có đọc rõ quy
-							định là nếu con không làm đủ bài sẽ thông báo về ngay
-							cho gia đình để phối hợp đôn đốc, nhắc nhở...thế nên tôi rất
-							yên
-							tâm và để con tự giác học vì nếu có vấn đề gì thì trung
-							tâm
-							sẽ thông báo cho tôi. Con đi học về và bảo lớp  </p>
-						<!-- <a href="" target="_blank" class="article">ARTICLE</a>
-						<a href="" class="demo">DEMO</a> -->
-					</div>
-					<div>
-						<!-- <img src="images/4.jpg" alt="" />
-						<h1>Bubbleriffic Image Gallery</h1> -->
-						<p>đông như
-							giảng đường đại học mẹ ạ, tôi có phần hơi e ngại dĩ trung tâm rất có tiếng nên tôi lại tự nhủ là trung
-							tâm có
-							phương pháp dạy để các con tiếp thu tốt, và cứ thế tôi
-							để
-							con học, con tôi được cái bố mẹ bảo học gì thì cứ đi
-							thôi và
-							ít khi kêu ca này nọ nên tôi cũng dần dần không để ý
-							nhiều.
-							Thế rồi lần lượt, tôi đóng tiền khóa 2 Pre-Ielts rồi
-							khóa 1,
-							khóa 2 Ielts với con số lên đến vài chục triệu đồng,
-							không
-							phải nhỏ đối với người làm công ăn lương như tôi, nhưng
-							thôi thì cố gắng vì giấc mơ cầm trong tay chứng chỉ 7.0 của
-							con... Đến một ngày gần hết khóa học thứ 2 thì trung tâm
-							có báo con thiếu bài, mở chi tiết ra xem thì trời ơi, con
-							tôi thiếu gần 20 bài... vậy lúc con tôi thiếu 1, 2 bài sao
-							không
-							thấy thông báo??? Rồi đốc thúc con hoàn thành bài để nộp
-							theo yêu cầu thì đến kỳ thi kết thúc hai khóa học, với
-							hai
-							khóa học này, theo như lộ trình của trung tâm thì các
-							con có
-							thể dự thi kỳ thi Ielts lấy điểm </p> <br>
-						
-					</div>
-					<div>
-						<img src="images/IELTS-la-gi.jpg" alt="" />
-						<!-- <h1>Collapsing Site Navigation</h1> -->
-						<p>6.5 hoặc 7.0. Ở trung
-							tâm
-							thông báo thi cuối kỳ 2 buổi, một buổi 3 kỹ năng (nghe,
-							đọc,viết) và một buổi nói; con tôi thi xong nghe, đọc, viết
-							thì
-							sau cứ chần chừ không chịu đăng ký thi nói, cũng chẳng
-							thấy
-							trung tâm nhắc nhở... cũng không thấy có điểm của các kỹ
-							năng con đã thi. Thế là học xong, thi xong, kết thúc
-							khóa
-							học và tôi nghĩ con tôi sẵn sàng đi thi Ielts. Tôi đăng
-							ký
-							thi cho con và đến ngày đưa đón con, hồi hộp đợi kết
-							quả...
-							Sau gần 2 tuần 5.5 là điểm số tôi nhận được, hoang mang
-							và
-							thất vọng vô cùng, không tin nổi vào kết quả  </p>
-						
-					</div>
-					<div>
-						<p>nhận được;
-							sẵn sàng đi thi để lấy ít nhất 6.5 mà điểm mang về 5.5 chỉ
-							trên
-							trình độ tối thiểu 5.0. Lúc nhận điểm thi, con lấy hết
-							can
-							đảm và bảo: Thực ra đi thi con không tự tin, con không
-							biết
-							gì mấy mẹ ạ... Vậy là, mục tiêu hết lớp 11 đạt Ielts 7.0 để dành thời
-							gian
-							ôn luyện Toán, Văn đã tan tành kế hoạch, để nâng 1 band
-							thì
-							lộ trình 1 năm nữa thì cũng là kỳ thi Quốc Gia của con,
-							vậy
-							là con phải nỗ lực ôn cả Toán, Văn và Ielts trong năm
-							lớp
-							12. Nhìn xung quanh, bạn bè đồng trang lứa với con đã
-							lấy
-							chứng chỉ 7.0, thậm chí 8.0 và giờ ung dung tạm gác môn
-							Tiếng Anh sang một bên để tập trung vào các môn còn lại
-							cho kỳ thi Quốc Gia. Tôi lúc này mới thấy ân hận, tại sao,
-							tại
-							sao, tôi không nghiêm túc tìm hiểu kỹ lớp học cho con,
-							không
-							sâu sát con để suốt 2 năm ròng con không tiến bộ mấy.
-							Tôi
-							ước gì thời gian quay trở lại, nhưng đó chỉ là ước mơ,
-							giờ là phải đối diện với vấn đề và tìm giải pháp. Tôi và con
-							ngồi trao 
-							</p>
-					</div>
-					<div>
-						<img src="images/1-luyen-thi-ielts.jpg.crdownload" alt="" />
-						<p>  đổi nghiêm túc và sau khi tìm hiểu thêm một số
-							phụ huynh có con đạt điểm tốt thì ngoài việc chọn lớp thì
-							việc
-							con tự giác học là cực cực kỳ cần thiết. Chốt lại, tôi
-							chọn
-							một trung tâm mới cho con với một lớp học chỉ có 4, 5
-							bạn và
-							tôi đăng ký cho con một chương trình học online để con
-							tự luyện thêm. Sau một thời gian, con đã rèn được việc tự
-							học,
-							tiến bộ dần nên con ngày một hứng thú hơn, con thích
-							lớp,
-							thích cô và rất thích chương trình học online vì khá
-							hiệu
-							quả và khơi dậy sự đam mê và tự giác trong con....
-							<b>VỠ ÒA HẠNH PHÚC...</b> <br> 6 tháng sau, đúng trước kỳ thi Quốc Gia 1 tháng, con thi
-							lại
-							Ielts với sự tự tin rõ rệt so với lần thi đầu, và kết
-							</p> <br>
-							<p>Nếu không có điểm Ielts 7.0 trước kỳ thi đại học để chọn
-								phương pháp xét tuyển sớm, con tôi chính thức trượt tất
-								cả
-								các trường mà con yêu thích và sẽ phải đối diện với hiện
-								thực phũ phàng TRƯỢT ĐẠI HỌC như giả thiết đã đề cập ở
-								trên
-								với những cú sốc tâm lý không thể lường trước. Điểm 7.0
-								Ielts thật sự là đi ĐIỀU KỲ DIỆU đối với con,
-								Thế nên, ngay từ bây giờ, với kinh nghiệm mẹ con tôi đã
-								trải
-								qua cùng những cảm xúc lo âu, hồi hộp, thất vọng và ân
-								hận... tôi thực sự mong muốn các bậc phụ huynh và các
-								con
-								hãy 
-								</p>
-					</div>
-					<div>
-						<!-- <img src="images/8.jpg" alt="" />
-						<h1>Hover Slide Effect</h1> -->
-						<p>quả
-							7.0, bằng tất cả nỗ lực từ việc chọn lớp, chọn khóa học,
-							đôn
-							đốc và nhất là việc ý thức tự học, con đã nâng 1.5 điểm
-							một
-							cách xuất sắc, tôi đã run lên khi đọc kết quả và tiếp
-							theo
-							vỡ òa niềm vui, niềm hạnh phúc cùng con.
-							Với 7.0 Ielts con dễ dàng nộp hồ sơ xét tuyển sớm đại
-							học
-							cùng với điểm tổng kết của lớp 12 hoặc cả 3 năm cấp 3
-							(tùy
-							yêu cầu của từng trường Đại học). Hoặc có thể chọn
-							phương thức dùng Ielts quy đổi hệ số kết hợp điểm thi hai môn
-							Toán
-							& Văn (theo khối con lựa chọn) thì con chỉ cần đạt điểm
-							2
-							môn Toán và Văn khoảng 15 điểm là đàng hoàng trúng
-							tuyển. Và cuối cùng con đỗ 3 trường đại học: Kinh tế quốc dân,
-							Thương mại và Học viện ngân hàng với đóng góp phần lớn do điểm
-							7.0
-							Ielts; phải nói là kỳ tích. Ngoài ra với điểm 7.0 con đủ
-							điều kiện học tại một số khoa liên kết quốc tế một cách
-							dễ dàng.
-							nghiêm túc học Tiếng Anh và luyện Ielts, có Ielts
-							con
-							tôi tự tin hơn rất nhiều và đã đàng </p>
-					</div>
-					<div>
-						<p>
-							hoàng bước vào cánh
-								cổng
-								trường đại học mơ ước. Tuy nhiên, việc chọn được lớp cho
-								con
-								là một phần, nhưng với chi phí khoảng 70 triệu để luyện
-								thi
-								của con tôi thì hẳn không phải gia đình nào cũng đủ điều
-								kiện vì bản thân tôi cũng phải cố gắng rất nhiều để có
-								thể
-								cho con theo học. Vậy nên, thay vì chặn lại ước mơ của
-								con,
-								bố mẹ hãy động viên con hiểu tầm quan trọng của việc học
-							Tiếng Anh, của việc luyện thi Ielts, không gì là không
-							thể,
-							chỉ cần chúng ta nỗ lực tìm kiếm giải pháp. Và việc lựa
-							chọn
-							khóa học online, khóa học đã giúp con tôi tự giác và
-							nâng
-							cao tinh thần tự học lên rất nhiều... ĐÓ LÀ GIẢI PHÁP
-							CHO
-							CON BẠN...
-						</p>
-					</div>
-				</div>
+                    <img src="IELTS-la-gi.jpg"> <br> <br>
+                    Vậy là, mục tiêu hết lớp 11 đạt Ielts 7.0 để dành thời gian
+                    ôn luyện Toán, Văn đã tan tành kế hoạch, để nâng 1 band thì
+                    lộ trình 1 năm nữa thì cũng là kỳ thi Quốc Gia của con, vậy
+                    là con phải nỗ lực ôn cả Toán, Văn và Ielts trong năm lớp
+                    12. Nhìn xung quanh, bạn bè đồng trang lứa với con đã lấy
+                    chứng chỉ 7.0, thậm chí 8.0 và giờ ung dung tạm gác môn
+                    Tiếng Anh sang một bên để tập trung vào các môn còn lại cho
+                    kỳ thi Quốc Gia. Tôi lúc này mới thấy ân hận, tại sao, tại
+                    sao, tôi không nghiêm túc tìm hiểu kỹ lớp học cho con, không
+                    sâu sát con để suốt 2 năm ròng con không tiến bộ mấy. Tôi
+                    ước gì thời gian quay trở lại, nhưng đó chỉ là ước mơ, giờ
+                    là phải đối diện với vấn đề và tìm giải pháp. Tôi và con
+                    ngồi trao đổi nghiêm túc và sau khi tìm hiểu thêm một số phụ
+                    huynh có con đạt điểm tốt thì ngoài việc chọn lớp thì việc
+                    con tự giác học là cực cực kỳ cần thiết. Chốt lại, tôi chọn
+                    một trung tâm mới cho con với một lớp học chỉ có 4, 5 bạn và
+                    tôi đăng ký cho con một chương trình học online để con tự
+                    luyện thêm. Sau một thời gian, con đã rèn được việc tự học,
+                    tiến bộ dần nên con ngày một hứng thú hơn, con thích lớp,
+                    thích cô và rất thích chương trình học online vì khá hiệu
+                    quả và khơi dậy sự đam mê và tự giác trong con....
+                    VỠ ÒA HẠNH PHÚC... <br> <br>
+                    6 tháng sau, đúng trước kỳ thi Quốc Gia 1 tháng, con thi lại
+                    Ielts với sự tự tin rõ rệt so với lần thi đầu, và kết quả
+                    7.0, bằng tất cả nỗ lực từ việc chọn lớp, chọn khóa học, đôn
+                    đốc và nhất là việc ý thức tự học, con đã nâng 1.5 điểm một
+                    cách xuất sắc, tôi đã run lên khi đọc kết quả và tiếp theo
+                    vỡ òa niềm vui, niềm hạnh phúc cùng con.
+                    Với 7.0 Ielts con dễ dàng nộp hồ sơ xét tuyển sớm đại học
+                    cùng với điểm tổng kết của lớp 12 hoặc cả 3 năm cấp 3 (tùy
+                    yêu cầu của từng trường Đại học). Hoặc có thể chọn phương
+                    thức dùng Ielts quy đổi hệ số kết hợp điểm thi hai môn Toán
+                    & Văn (theo khối con lựa chọn) thì con chỉ cần đạt điểm 2
+                    môn Toán và Văn khoảng 15 điểm là đàng hoàng trúng tuyển. Và
+                    cuối cùng con đỗ 3 trường đại học: Kinh tế quốc dân, Thương
+                    mại và Học viện ngân hàng với đóng góp phần lớn do điểm 7.0
+                    Ielts; phải nói là kỳ tích. Ngoài ra với điểm 7.0 con đủ
+                    điều kiện học tại một số khoa liên kết quốc tế một cách dễ
+                    dàng. <br> <br>
 
-				
+                    <img src="ielts2.png"> <br> <br>
+                    Nếu không có điểm Ielts 7.0 trước kỳ thi đại học để chọn
+                    phương pháp xét tuyển sớm, con tôi chính thức trượt tất cả
+                    các trường mà con yêu thích và sẽ phải đối diện với hiện
+                    thực phũ phàng TRƯỢT ĐẠI HỌC như giả thiết đã đề cập ở trên
+                    với những cú sốc tâm lý không thể lường trước. Điểm 7.0
+                    Ielts thật sự là đi ĐIỀU KỲ DIỆU đối với con,
+                    Thế nên, ngay từ bây giờ, với kinh nghiệm mẹ con tôi đã trải
+                    qua cùng những cảm xúc lo âu, hồi hộp, thất vọng và ân
+                    hận... tôi thực sự mong muốn các bậc phụ huynh và các con
+                    hãy nghiêm túc học Tiếng Anh và luyện Ielts, có Ielts con
+                    tôi tự tin hơn rất nhiều và đã đàng hoàng bước vào cánh cổng
+                    trường đại học mơ ước. Tuy nhiên, việc chọn được lớp cho con
+                    là một phần, nhưng với chi phí khoảng 70 triệu để luyện thi
+                    của con tôi thì hẳn không phải gia đình nào cũng đủ điều
+                    kiện vì bản thân tôi cũng phải cố gắng rất nhiều để có thể
+                    cho con theo học. Vậy nên, thay vì chặn lại ước mơ của con,
+                    bố mẹ hãy động viên con hiểu tầm quan trọng của việc học
+                    Tiếng Anh, của việc luyện thi Ielts, không gì là không thể,
+                    chỉ cần chúng ta nỗ lực tìm kiếm giải pháp. Và việc lựa chọn
+                    khóa học online, khóa học đã giúp con tôi tự giác và nâng
+                    cao tinh thần tự học lên rất nhiều... ĐÓ LÀ GIẢI PHÁP CHO
+                    CON BẠN...<br> <br>
+                    Sở hữu khóa học ngay để tiếp sức cho ước mơ của con chỉ với
+                    <strong style="color:red;"> 500.000 VNĐ</strong> </p>
+                   </span>
+            
+        </div>
+
+        <div class='container2'
+			style="display: flex;justify-content: space-around;align-items: flex-start;">
+			<div class='button-hand'>
+
+				<a href="https://kyna.vn/ielts-75" target="_blank" style="margin-right:20px;">
+					<button> Khóa học đầy đủ
+						<div class='hands'></div>
+					</button>
+				</a>
+
+				<a href="https://kyna.vn/chinh-phuc-ielts-listening-and-speaking-75" target="_blank"
+					style="margin-left:20px;">
+					<button> Khóa học nghe nói
+						<div class='hands'></div>
+					</button>
+				</a>
+
+				<br> <br> <br>
+				<a href="https://kyna.vn/bi-quyet-chinh-phuc-ielts-reading-75" target="_blank"
+					style="margin-right:17px;margin-left: 15px;">
+					<button> Khóa học đọc
+						<div class='hands'></div>
+					</button>
+				</a>
+
+				<a href="https://kyna.vn/bi-quyet-chinh-phuc-ielts-writing-75" target="_blank"
+					style="margin-left:2.1cm;">
+					<button> Khóa học viết
+						<div class='hands'></div>
+					</button>
+				</a>
+				<br>
+				<br>
+				<br>
+				<br />
+				<br>
 			</div>
-			<div class='container2' style="margin-bottom:800px;display: flex;justify-content: space-around;margin: 20px;align-items: flex-start;">
-				<div class='button-hand'>
 
-					<a href="https://kyna.vn/ielts-75" target="_blank" style="margin-right:20px;">
-						<button> Khóa học đầy đủ
-							<div class='hands'></div>
-						</button>
-					</a>
-
-					<a href="https://kyna.vn/ielts-75" target="_blank" style="margin-left:20px;">
-						<button> Khóa học nghe nói
-							<div class='hands'></div>
-						</button>
-					</a>
-					
-					<br> <br> <br>
-					<a href="https://kyna.vn/ielts-75" target="_blank" style="margin-right:17px;margin-left: 15px;">
-						<button> Khóa học viết
-							<div class='hands'></div>
-						</button>
-					</a>
-
-					<a href="https://kyna.vn/ielts-75" target="_blank" style="margin-left:2.1cm;">
-						<button> Khóa học viết
-							<div class='hands'></div>
-						</button>
-					</a>
-					<br>
-					<br>
-					<br>
-					<br />
-					<br>
-				</div>
-				
-			</div>
 		</div>
-
-		<!-- <div class="container">
-			<button class="button">Get Started</button>
-		</div> -->
-		
 	</div>
-        
-        <script type="text/javascript">
-			$(function() {
-				var $mybook 		= $('#mybook');
-				var $bttn_next		= $('#next_page_button');
-				var $bttn_prev		= $('#prev_page_button');
-				var $loading		= $('#loading');
-				var $mybook_images	= $mybook.find('img');
-				var cnt_images		= $mybook_images.length;
-				var loaded			= 0;
-				 
-				$mybook_images.each(function(){
-					var $img 	= $(this);
-					var source	= $img.attr('src');
-					$('<img/>').load(function(){
-						++loaded;
-						if(loaded == cnt_images){
-							$loading.hide();
-							$bttn_next.show();
-							$bttn_prev.show();
-							$mybook.show().booklet({
-								name:               null,                            //  
-								width:              800,                             //  
-								height:             500,                             //   
-								speed:              600,                             //  
-								direction:          'LTR',                           //  
-								                           //  
-								next:               $bttn_next,          			//  
-								prev:               $bttn_prev,          			//  
-								                       
-							});
-							Cufon.refresh();
-						}
-					}).attr('src',source);
-				});
-				
-			});
-        </script>
- 
     </body>
- 
 </html>
