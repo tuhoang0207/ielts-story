@@ -220,4 +220,9 @@ animation: pointing 1s infinite;
         margin-bottom: 15px;
         margin-left: 16px;
     }
+
+    #btnWri{
+        margin-top: 15px;
+        margin-right: 16px;
+    }
 }
