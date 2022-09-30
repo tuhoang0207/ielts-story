@@ -228,6 +228,7 @@ animation: pointing 1s infinite;
     #btnWri{
         margin-top: 15px;
         margin-right: 5.1cm;
+        left: 10px;
     }
 
     .container2 {
