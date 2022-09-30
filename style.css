@@ -192,7 +192,10 @@ animation: pointing 1s infinite;
         text-align: center;
     }
 
-    ;
+    * {
+        text-align: center;
+    }
+
 
     strong,
     h1 {
