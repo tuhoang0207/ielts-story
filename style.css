@@ -216,7 +216,7 @@ animation: pointing 1s infinite;
         padding: 10px;
     }
 
-    #btnFull {
+    .btnFull {
         margin-bottom: 15px;
         margin-left: 16px;
     }
