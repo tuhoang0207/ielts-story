@@ -225,4 +225,10 @@ animation: pointing 1s infinite;
         margin-top: 15px;
         margin-right: 184px;
     }
+
+    .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
