@@ -39,8 +39,10 @@ span {
 
 }
 
-strong{
-    font-size: 60px;
+h1,strong{
+    font-weight:bold;
+    text-align: center;
+    font-size: 80px;
 }
 
 img {
@@ -191,7 +193,13 @@ animation: pointing 1s infinite;
     margin: auto;
 }
 
-@media only screen and (max-width: 60em) {
+@media screen and (min-width: 414px) {
+body{
+    max-width: 100%;
+    width: 100%;
+   
+}
+
     p {
         font-size: 25px;
         text-align: center;
@@ -202,9 +210,8 @@ animation: pointing 1s infinite;
     }
 
 
-    strong,
-    h1 {
-        font-size: 20px;
+    strong,h1{
+        font-size: 35px;
     }
 
     span {
@@ -219,7 +226,7 @@ animation: pointing 1s infinite;
     button {
         width: 90%;
         color: black;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Times New Roman', Times, serif;
     }
 
     .hands2{
@@ -240,7 +247,7 @@ animation: pointing 1s infinite;
     .container2 {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        /* align-items: flex-start; */
     }
 
     #div-parent {
