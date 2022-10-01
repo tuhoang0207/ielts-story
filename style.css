@@ -39,12 +39,17 @@ span {
 
 }
 
+strong{
+    font-size: 60px;
+}
+
 img {
     width: 30cm;
     height: 15cm;
 }
 
 button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background: transparent;
     color: black;
     border: 3px solid white;
@@ -214,6 +219,7 @@ animation: pointing 1s infinite;
     button {
         width: 90%;
         color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
     .hands2{
