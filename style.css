@@ -191,7 +191,7 @@ animation: pointing 1s infinite;
     margin: auto;
 }
 
-@media only screen and (max-width: 44.1875em) {
+@media only screen and (max-width: 60em) {
     p {
         font-size: 25px;
         text-align: center;
