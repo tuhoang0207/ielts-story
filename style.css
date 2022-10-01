@@ -242,4 +242,9 @@ animation: pointing 1s infinite;
         justify-content: center;
         align-items: flex-start;
     }
+
+    #div-parent {
+        display: flex;
+        justify-content: center;
+    }
 }
